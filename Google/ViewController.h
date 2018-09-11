@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleSignIn/GoogleSignIn.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<GIDSignInDelegate, GIDSignInUIDelegate>
 
 
+- (IBAction)gPlusAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *fbLoginAction;
+- (IBAction)fbLoginAction:(id)sender;
 @end
 

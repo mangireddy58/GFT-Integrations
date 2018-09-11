@@ -16,7 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //Facebook SDK
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+    [[Twitter sharedInstance] startWithConsumerKey:@"Z9fK0d8c24BOGguOJsZ99nfyW" consumerSecret:@"8rwv00payP0c3nj7oRuDf1chOSEQf77NSu73jJIwcZK7CSmzpY"];
+    
     return YES;
 }
 
@@ -47,5 +52,42 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    if([[url absoluteString] containsString:@"google"]){
+//        return [[GIDSignIn sharedInstance] handleURL:url sourceApplication:sourceApplication
+//                                          annotation:annotation];
+//    }
+//    else{
+//        return [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+//    }
+//    return YES;
+//}
 
+- (BOOL)application:(UIApplication* )app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    if([[url absoluteString] containsString:@"twitterkit"]){
+        return [[Twitter sharedInstance] application:app openURL:url options:options];
+    }
+    else if([[url absoluteString] containsString:@"google"]){
+        return [[GIDSignIn sharedInstance] handleURL:url
+                                   sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                          annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+    }
+    else{
+        BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:app
+                                                                      openURL:url
+                                                            sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                                   annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+                        ];
+        return handled;
+    }
+    return YES;
+}
+
+
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+//    if([[url absoluteString] containsString:@"googleTwitter://"]) {
+//        return [[Twitter sharedInstance] application:app openURL:url options:options];
+//    }
+//    return YES;
+//}
 @end

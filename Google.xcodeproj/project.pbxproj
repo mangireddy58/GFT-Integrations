@@ -13,9 +13,14 @@
 		3259F2A81EB04CBD0055CB88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259F2A61EB04CBD0055CB88 /* Main.storyboard */; };
 		3259F2AA1EB04CBD0055CB88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3259F2A91EB04CBD0055CB88 /* Assets.xcassets */; };
 		3259F2AD1EB04CBD0055CB88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259F2AB1EB04CBD0055CB88 /* LaunchScreen.storyboard */; };
+		5C62AA741B288EDE45AE012B /* libPods-Google.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA77F6C837A6C9A2B712E02 /* libPods-Google.a */; };
+		9D91019821479E5300BA6BC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D91019721479E5300BA6BC8 /* GoogleService-Info.plist */; };
+		9D91019A2147A8CE00BA6BC8 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9101992147A8CE00BA6BC8 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0907D6BCD7300FE8871C6832 /* Pods-Google.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google/Pods-Google.debug.xcconfig"; sourceTree = "<group>"; };
+		20A6003F76F8A5E3B87067DF /* Pods-Google.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google/Pods-Google.release.xcconfig"; sourceTree = "<group>"; };
 		3259F29A1EB04CBD0055CB88 /* Google.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Google.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3259F29E1EB04CBD0055CB88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3259F2A01EB04CBD0055CB88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		3259F2A91EB04CBD0055CB88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3259F2AC1EB04CBD0055CB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3259F2AE1EB04CBD0055CB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D91019721479E5300BA6BC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D9101992147A8CE00BA6BC8 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		CBA77F6C837A6C9A2B712E02 /* libPods-Google.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Google.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D91019A2147A8CE00BA6BC8 /* SafariServices.framework in Frameworks */,
+				5C62AA741B288EDE45AE012B /* libPods-Google.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F9A7A24BDF0A794FF41C74C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0907D6BCD7300FE8871C6832 /* Pods-Google.debug.xcconfig */,
+				20A6003F76F8A5E3B87067DF /* Pods-Google.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3259F2911EB04CBC0055CB88 = {
 			isa = PBXGroup;
 			children = (
 				3259F29C1EB04CBD0055CB88 /* Google */,
 				3259F29B1EB04CBD0055CB88 /* Products */,
+				0F9A7A24BDF0A794FF41C74C /* Pods */,
+				E4A06598F4E3AC2689AACA06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +87,7 @@
 				3259F2A91EB04CBD0055CB88 /* Assets.xcassets */,
 				3259F2AB1EB04CBD0055CB88 /* LaunchScreen.storyboard */,
 				3259F2AE1EB04CBD0055CB88 /* Info.plist */,
+				9D91019721479E5300BA6BC8 /* GoogleService-Info.plist */,
 				3259F29D1EB04CBD0055CB88 /* Supporting Files */,
 			);
 			path = Google;
@@ -79,6 +101,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4A06598F4E3AC2689AACA06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D9101992147A8CE00BA6BC8 /* SafariServices.framework */,
+				CBA77F6C837A6C9A2B712E02 /* libPods-Google.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3259F2B11EB04CBD0055CB88 /* Build configuration list for PBXNativeTarget "Google" */;
 			buildPhases = (
+				238C797B637F5462DF4AAF95 /* [CP] Check Pods Manifest.lock */,
 				3259F2961EB04CBD0055CB88 /* Sources */,
 				3259F2971EB04CBD0055CB88 /* Frameworks */,
 				3259F2981EB04CBD0055CB88 /* Resources */,
+				C23E3076AB03C50DC7C6DF11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -105,11 +138,12 @@
 		3259F2921EB04CBC0055CB88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Mangi;
 				TargetAttributes = {
 					3259F2991EB04CBD0055CB88 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MR2PX4Y62Y;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,10 +174,56 @@
 				3259F2AD1EB04CBD0055CB88 /* LaunchScreen.storyboard in Resources */,
 				3259F2AA1EB04CBD0055CB88 /* Assets.xcassets in Resources */,
 				3259F2A81EB04CBD0055CB88 /* Main.storyboard in Resources */,
+				9D91019821479E5300BA6BC8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		238C797B637F5462DF4AAF95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C23E3076AB03C50DC7C6DF11 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google/Pods-Google-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google/Pods-Google-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3259F2961EB04CBD0055CB88 /* Sources */ = {
@@ -187,15 +267,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -235,15 +323,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -270,8 +366,10 @@
 		};
 		3259F2B21EB04CBD0055CB88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0907D6BCD7300FE8871C6832 /* Pods-Google.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MR2PX4Y62Y;
 				INFOPLIST_FILE = Google/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -282,8 +380,10 @@
 		};
 		3259F2B31EB04CBD0055CB88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20A6003F76F8A5E3B87067DF /* Pods-Google.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MR2PX4Y62Y;
 				INFOPLIST_FILE = Google/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -311,6 +411,7 @@
 				3259F2B31EB04CBD0055CB88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
